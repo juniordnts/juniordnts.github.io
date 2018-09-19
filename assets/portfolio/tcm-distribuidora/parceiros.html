@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TCM - Distribuidora</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="assets/images/logo.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class="load-body">
+		<span></span>
+	</div>
+
+	<!-- Navbar -->
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile"
+			 aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<img class="logo-brand" src="assets/images/logo.png">
+			<div class="collapse navbar-collapse" id="navbarMobile">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item"><a data-lang-en="Home" data-lang-ch="始" data-lang-br="Voltar Para Início" class="nav-link" href="index.html"></a></li>
+					<li class="nav-item"><a class="nav-link" onclick="changeLang('br')" href="#"><img class="flag-icon" src="assets/images/brazil.png"></a></li>
+					<li class="nav-item"><a class="nav-link" onclick="changeLang('en')" href="#"><img class="flag-icon" src="assets/images/usa.png"></a></li>
+					<li class="nav-item"><a class="nav-link" onclick="changeLang('ch')" href="#"><img class="flag-icon" src="assets/images/china.png"></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Conteúdo -->
+
+	<section class="container rounded pt-1">
+
+		<!-- Parceiros Landing-->
+
+		<div class="container">
+				<h3 class="tittle-inner text-center">
+						<span data-lang-en="our" data-lang-ch="我們的" data-lang-br="nossos" class="card-text"></span>
+						<span data-lang-en="PARTNERS" data-lang-ch="伙伴" data-lang-br="PARCEIROS" class="tittle-green"></span>
+					</h3>
+				<hr class="my-4">
+
+				<div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="owl-carousel slide-owl-land owl-theme scrollspy">
+								<div class="item">
+									<img src="assets/images/clarence_vision.jpg">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<h1 data-lang-en="Partner name" data-lang-ch="夥伴名稱" data-lang-br="Clarence Vision" class="display-4"></h1>
+							<h5 data-lang-en="" data-lang-ch="" data-lang-br="Nós somos da Clarence Vision, trabalhamos com importação de produtos ópticos de altíssima performasse. *POLYCARBONETE AR-HMC *MULTIFOCAIS PHOTOCROMIC AR-HMC	*MULTIFOCAIS COM AR	*VISÃO SIMPLES PHOTO AR-HMC" class="font-light"></h5>
+						</div>
+					</div>
+					<hr class="my-4">
+				</div>
+
+				<div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="owl-carousel slide-owl-land owl-theme scrollspy">
+									<div class="item">
+										<img src="assets/images/chenyuan1.jpg">
+									</div>
+									<div class="item">
+										<img src="assets/images/chenyuan2.jpg">
+									</div>
+									<div class="item">
+										<img src="assets/images/chenyuan3.jpg">
+									</div>
+									<div class="item">
+										<img src="assets/images/chenyuan4.jpg">
+									</div>
+									<div class="item">
+										<img src="assets/images/chenyuan5.jpg">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<h1 data-lang-en="Partner name" data-lang-ch="夥伴名稱" data-lang-br="Chenyuan Optical" class="display-4"></h1>
+								<h5 data-lang-en="" data-lang-ch="" data-lang-br=" A Chenyuan Optical é uma industria de lentes oftálmicas chinesa há mais de 15 anos no mercado internacional. Exportamos lentes de alta qualidade para mais de 50 países, como: Alemanha, Espanha, Russia, Chile, Brasil, EUA entre outros. O nosso dever é oferecer produtos de qualidade para nossos clientes." class="font-light"></h5>
+							</div>
+						</div>
+						<hr class="my-4">
+					</div>
+
+		</div>
+
+		<!-- Contato -->
+
+		<div id="contato" class="container">
+				<br>
+				<h3 class="tittle-inner">
+					<span data-lang-en="contact" data-lang-ch="聯繫" data-lang-br="fale"></span>
+					<span data-lang-en="US" data-lang-ch="我們" data-lang-br="CONOSCO" class="tittle-green"></span>
+				</h3>
+				<div class="row">
+					<form class="col-md-6 form-contact py-2" autocomplete="off" action="send-mail.php" method="POST">
+						<div class="form-group">
+							<!-- <label for="nome">Nome</label> -->
+							<input data-lang-en="Name" data-lang-ch="名稱" data-lang-br="Nome" type="text" class="form-control border border-light" id="nome" aria-describedby="emailHelp" placeholder="Nome" name="nome">
+						</div>
+						<div class="form-group">
+							<!-- <label for="email">Email</label> -->
+							<input data-lang-en="Email" data-lang-ch="電子郵件" data-lang-br="Email" type="email" class="form-control border border-light" id="email" aria-describedby="emailHelp" placeholder="Email" name="email">
+						</div>
+						<div class="form-group">
+							<!-- <label for="assunto">Assunto</label> -->
+							<input data-lang-en="Subject" data-lang-ch="學科" data-lang-br="Assunto" type="text" class="form-control border border-light" id="assunto" aria-describedby="emailHelp" placeholder="Assunto" name="assunto">
+						</div>
+						<div class="form-group">
+							<textarea data-lang-en="Message" data-lang-ch="信息" data-lang-br="Mensagem" class="form-control border border-light" id="exampleFormControlTextarea1" rows="3" placeholder="Mensagem" name="mensagem"></textarea>
+						</div>
+						<button data-lang-en="SEND" data-lang-ch="發送" data-lang-br="ENVIAR" type="submit" class="btn col-md-12 text-white"></button>
+					</form>
+					<div class="col-md-6 rounded py-2">
+						<iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.427007665149!2d-35.22033916019903!3d-5.795204997354496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwNDcnNDIuNyJTIDM1wrAxMycwNy4wIlc!5e0!3m2!1spt-BR!2sbr!4v1531318395910"
+						 width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+	
+	</section>
+
+	<!-- Footer -->
+
+	<footer class="container text-white">
+			<div class="row">
+				<div class="col-md-6 col-xs-12 text-light">
+					<a href="https://www.facebook.com/tcmdistribuidora/" class="nav-link pl-0 face=a" target="_blank"><p class="text-white"><span data-lang-en="VISIT OUR FACEBOOK" data-lang-ch="VISIT OUR FACEBOOK" data-lang-br="VISITE NOSSO FACEBOOK"></span><img class="foot-face" src="assets/images/facebook.png"></p></a>
+					<!-- <img class="foot-face" src="assets/images/facebook.png"> -->
+					<p data-lang-en="ADDRESS: CIVT - UFRN -AV. SENADOR SALGADO FILHO, 3000" data-lang-ch="地址:  CIVT - UFRN -AV. SENADOR SALGADO FILHO, 3000" data-lang-br="ENDEREÇO: CIVT - UFRN -AV. SENADOR SALGADO FILHO, 3000"></p>
+					<p>LAGOA NOVA, CEP 59.078-970- NATAL/RN</p>
+					<p data-lang-en="PHONE:+55 (84) 3342-2216 RAMAL 100" data-lang-ch="電話:+55 (84) 3342-2216 RAMAL 100" data-lang-br="TELEFONE: (84) 3342-2216 RAMAL 100"></p>
+					<p data-lang-en="E-MAIL: CONTATO@CONTATO.COM" data-lang-ch="電子郵件: CONTATO@CONTATO.COM" data-lang-br="E-MAIL: CONTATO@CONTATO.COM">E-MAIL: CONTATO@CONTATO.COM</p>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<img class="w-100 align-middle" src="assets/images/logobw.png">
+				</div>
+			</div>
+			<br>
+			<div class="eject text-center">
+					<a class="" href="http://ejectufrn.com.br/" target="_blank"><p>Powered by © EJECT 2018<img src="assets/images/eject.png"></p></a>
+			</div>
+		</footer>
+
+	<!-- Scripts -->
+
+	<script src="assets/js/owl.carousel.min.js"></script>
+
+	<script src="assets/js/lang.main.js"></script> <!-- Script de Configuração de Linguagem -->
+
+	<script>
+		$('.slide-owl-land').owlCarousel({
+			items: 1,
+			loop: true,
+			autoHeight: true,
+			autoplay: true,
+			autoplayTimeout: 4000,
+			autoplayHoverPause: false,
+		});
+	</script>
+
+</body>
+
+</html>

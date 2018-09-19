@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+	<!-- LISTA DE PRODUTOS -->
+
+	<section class="container">
+		<div class="product-box product-box-page">
+			<ul class="nav navbar-nav">
+        {% for category in categories %}
+				  <li><a href="{% url 'search' %}">
+            {% if category.icon %}
+                  {{ category.icon.as_html }}
+              {% endif %}
+            {{ category.title }}</a></li>
+        {% endfor %}
+			</ul>
+		</div>
+	</section>
+
+	<!-- PRODUTO -->
+
+	<section>
+		<div class="bar-box">
+			<div class="container">
+				<a href="{% url 'index' %}">Início</a>
+				<a href="">Feijão</a>
+				<a href="">Produto</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- ULTIMOS PRODUTOS -->
+
+	<section class="container margin">
+		<div class="p-product-box">
+			<div class="p-product-title">
+				Corte carne de gado Friboi
+			</div>
+			<div class="p-product-img">
+				<img src="{% static 'assets/static/images/produto1.jpg' %}">
+			</div>
+
+			<div class="p-product-txt">
+				<div class="p-product-price">
+					<strong>35</strong>
+				</div>
+				<div class="p-product-descript">
+					Loren ipsum dolor sit amet dalor valet nigari a suctor. oren ipsum dolor sit amet dalor valet nigari a suctor.
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="container margin">
+
+		<div class="product-head-partn">
+			<div class="product-inner">
+				<div class="product-icon"><span class="fa fa-bars"></span></div>
+				<div class="product-select"> Últimos</div>
+				<div id="customNav" class="owl-nav"></div>
+			</div>
+		</div>
+
+		<div class="flex-line owl-carousel partn-box owl-theme">
+			
+      {% for product in products %}
+        <div class="item-box">
+          <div class="item-inner">
+            <div class="item-img">
+              <img src="{{ product.image.url }}">
+            </div>
+            <div class="item-info">
+              <div class="item-txt">
+                <strong>{{ product.title }}</strong>
+              </div>
+              <div class="item-price">
+                <strong>{{ product.price }}</strong>
+                <small class="text-muted">40</small>
+                <a href="{% url 'list' %}"><button class="btn-product">Ver</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+		</div>
+	</section>
+
+{% endblock %}

@@ -1,0 +1,263 @@
+:root{
+	--verde-base: #81ab0f;
+}
+body{
+	background-color: #688aa1;
+	overflow-x: hidden;
+}
+section{
+	background-color: #b2c5d4;
+	padding-bottom: 50px;
+}
+.logo-brand{
+	height: 60px;
+}
+.tittle-inner{
+	margin: 30px 0;
+}
+.tittle-green{
+	color: #81ab0f;
+	margin-left: 8px;
+	font-size: 30px;
+}
+.back-green{
+	background-color: var(--verde-base);
+}
+.back-green:hover{
+	background-color: #65850e;
+}
+.font-light{
+	font-weight: 300;
+}
+#navbarMobile{
+	text-align: right;
+}
+.flag-icon{
+	height: 22px;
+	/* padding: 2px; */
+	/* margin-top: 8px; */
+	vertical-align: middle;
+}
+.load-body{
+	height: 100vh; width: 100%;
+	z-index: 100;
+	position: fixed;
+	top: 0px; left: 0px;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.load-body{
+	visibility: hidden;
+}
+.load-body span {
+	position: absolute;
+	top: calc(50% - 53px); left: calc(50% - 53px);
+	animation: spin 600ms linear infinite;
+	border: 16px solid #585858; /* Light grey */
+	border-top: 16px solid #2775a8; /* Blue */
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/* Revender */
+
+#revender a:hover{
+	background-color: #65850e;
+}
+
+/* Inicio */
+
+.slide-owl-home,.slide-owl-home .item{
+	height: calc(100vh - 76px);
+}
+.owl-carousel .item img{
+	width: 100%; height: 100%;
+	object-fit: cover;
+	/* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--verde-esc) 70%); */
+}
+.shadow-slide {
+	position: absolute;
+	z-index: 5;
+	bottom: 0px;
+	right: 0px;
+	width: 100%;
+	height: 80px;
+	background: linear-gradient(to top, rgba(104, 138, 161) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Produtos */
+
+#produtos img{
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+#produtos .card{
+	margin: 8px;
+}
+.card-body.card-trans{
+	background-color: #d6dfe6;
+}
+
+/* Faca Pedido */
+
+.pedido-box{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: white;
+}
+/* .pedido-box a{
+	background-color: transparent;
+} */
+.pedido-div{
+	position: relative;
+	height: 100%;
+}
+.pedido-div a{
+	position: absolute;
+	bottom: 0px;
+}
+
+/* Parceiros */
+
+.slide-owl-parc{
+	background-color: white;
+}
+.slide-owl-parc .item{
+	padding: 10px;
+}
+.slide-owl-parc .item img{
+	width: 100%; height: 250px;
+	vertical-align: middle;
+	margin: 0px auto;
+	padding: 5px;
+	object-fit: contain;
+	/* background-color: white; */
+}
+
+/* Contato */
+
+.form-contact input, .form-contact textarea{
+	background-color: transparent;
+}
+.form-contact input::placeholder, .form-contact textarea::placeholder{
+	color: white;
+}
+.form-contact input:focus::placeholder, .form-contact textarea:focus::placeholder{
+	color: grey;
+}
+.form-contact button{
+	background-color: #7e919e;
+}
+.form-contact button:hover{
+	background-color: #517286;
+}
+iframe{
+	filter: grayscale(100%);
+}
+
+/* Footer */
+
+footer{
+	margin-top: 20px;
+}
+.foot-face{
+	height: 30px;
+	vertical-align: middle;
+	margin-bottom: 5px;
+	margin-right: 8px;
+}
+
+/* EJECT */
+
+footer{
+	overflow-y: hidden;
+}
+.eject{
+  font-size: 15px;
+  line-height: 20px;
+  background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
+}
+.eject:hover img{
+  animation: eject 1.8s infinite;
+}
+.eject p{
+  position: relative;
+}
+.eject a{
+  text-decoration: none;  color: white;  
+  vertical-align: middle;  color: white;
+}
+.eject img{
+  height: 40px;
+  position: absolute;
+  bottom: -70px; left: calc(50% - 20px);
+  vertical-align: middle;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+@keyframes eject {
+  40%  { opacity: 1;}
+  100% { bottom: 30px; opacity: 0; }
+}
+
+/* Bootstrap Edit */
+
+.navbar-collapse {
+	flex-grow: initial;
+}
+
+/* Responsivo */
+
+@media(max-width: 770px){
+	.slide-owl-home,.slide-owl-home .item{
+		height: 300px;
+	}
+	.shadow-slide {
+		height: 20px;
+	}
+	footer{
+		text-align: center;
+	}
+	.pedido-div{
+		position: relative;
+		height: 100%;
+	}
+	.pedido-div a{
+		position: initial;
+	}
+	.display-4{
+		font-size: 40px;
+	}
+	.logo-brand{
+		margin: 0px auto;
+	}
+	#navbarMobile{
+		text-align: center;
+	}
+	.no-r-pad{
+		padding-right: 100px;
+	}
+}
+
+/* Landing Page */
+
+.slide-owl-land .item{
+	width: 100%;
+	height: 300px;
+}
+.slide-owl-land .item img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	margin: 0px auto;
+	background-color: white;
+	padding: 10px;
+}

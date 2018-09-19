@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+	<!-- LISTA DE PRODUTOS -->
+
+	<section class="container">
+		<div class="product-box product-box-page">
+			<ul class="nav navbar-nav">
+        {% for category in categories %}
+				  <li><a href="{% url 'search' %}">
+              {% if category.icon %}
+                  {{ category.icon.as_html }}
+              {% endif %}
+              {{ category.title }}</a></li>
+        {% endfor %}
+			</ul>
+		</div>
+	</section>
+
+	<!-- PRODUTO -->
+
+	<section>
+		<div class="bar-box">
+			<div class="container">
+				<a href="{% url 'index' %}">Início</a>
+				<a href="">Feijão</a>
+				<a href="">Produto</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- PESQUISA -->
+
+	<section class="container margin">
+		<div>
+
+			<section class="col-md-3 col-selection">
+				<div class="product-head">
+					<div class="product-inner">
+						<div class="product-icon-search"><span class="fa fa-bars"></span></div>
+						<div class="product-select-search"> Pesquisa</div>
+					</div>
+
+					<div class="checkbox-search-inner margin">
+            {% for category in categories %}
+              <label class="checkbox-search">
+                {{ category.title }}<input type="checkbox"><span class="checkmark"></span>
+              </label>
+						{% endfor %}
+					</div>
+
+					
+					<div class="slide-price-box">
+						<div class="slide-price-inner">
+							<label for="price-max">Preço Máximo: </label> <span id="value-price"></span>
+							<input type="range" min="1" max="1000" value="1000" class="slider-price" id="range-price">
+						</div>
+						<br>
+						<input class="btn btn-sm btn-search" type="submit" value="Ok">
+					</div>
+					
+
+				</div>
+			</section>
+
+			<section class="col-md-9 col-content">
+				<div class="col-content-inner">
+
+					<div class="results-box">
+
+						<div class="results-head">
+							<div class="results-tittle"> Resultados</div>
+							<div class="product-head">
+								<div class="product-inner">
+									<div class="product-select-result">
+										Organizar por:
+										<select name="product-sort">
+											<option value="date-asc" selected="selected">Mais Novos</option>
+											<option value="price-asc">Menor Preço</option>
+											<option value="price-desc">Maior Preço</option> 
+										</select>
+									</div>
+									<div class="product-select-result">
+										Resultados: 
+										<strong style="color: var(--btn-green-hover)">4</strong>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div style="width: 100%; text-align: center;">
+              {% for product in products %}
+                <div class="item-box">
+                  <div class="item-inner">
+                    <div class="item-img">
+                      <img src="{{ product.image.url }}">
+                    </div>
+                    <div class="item-info">
+                      <div class="item-txt">
+                        <strong>{{ product.title }}</strong>
+                      </div>
+                      <div class="item-price">
+                        <strong>{{ product.price }}</strong>
+                        <small class="text-muted">40</small>
+                        <a href="{% url 'list' %}"><button class="btn-product">Ver</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+						</div>
+
+					</div>
+
+					<div class="pagination-result">
+						<div class="product-inner-pag">
+							<a href=""><div class="product-select-pag bt-prv"> Anterior</div></a>
+							<a href=""><div class="product-select-pag bt-nxt"> Próximo</div></a>
+							<a href=""><div class="product-select-pag active"> 1</div></a>
+							<a href=""><div class="product-select-pag"> 2</div></a>
+							<a href=""><div class="product-select-pag"> 3</div></a>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+		</div>
+	</section>
+
+{% endblock %}

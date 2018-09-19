@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horarios Circular</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="">
+	<link rel="stylesheet" type="text/css" href="materialize.min.css">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="materialize.min.js"></script>
+	<link href="google.material.icon.css" rel="stylesheet">
+	<meta name="theme-color" content="#424242">
+	<link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<body class="grey lighten-3">
+
+	<style>
+	.icon-p{
+		font-size: 10px;
+	}
+	.next-bus-1{
+		background-color: rgba(255,0,0,0.5);
+	}
+	.collapsible-header, .collapsible{
+		border: none;
+		border-color: transparent;
+	}
+	.hora{
+		color: ;
+		text-align: center; text-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+		font-size: 20px;
+	}
+	.sumario i{
+		font-size: 20px; vertical-align: middle;
+	}
+	.tooltiped span{
+		background-color: red;
+	}
+	@media (max-width: 770px){
+		.collapsible-body{
+			padding: 1rem;
+		}
+	}
+</style>
+
+<!-- <tr>
+<td>6h35</td>
+<td>45</td><td class="tooltipped" data-position="top" data-tooltip="I am a tooltip">55</td>
+</tr> -->
+<!-- <tr>
+	<td>6:45 <span class="new badge red" data-badge-caption="RU"></span></td>
+</tr> -->
+
+<nav>
+	<div class="nav-wrapper grey darken-3">
+		<div class="container">
+			<a href="#" class="brand-logo">Circular</a>
+			<!-- <ul id="nav-mobile" class="right hide-on-med-and-down"> -->
+				<!-- <li><a href="sass.html">Sass</a></li> -->
+				<!-- <li><a href="badges.html">Components</a></li> -->
+				<!-- <li><a href="collapsible.html">JavaScript</a></li> -->
+				<!-- </ul> -->
+			</div>
+		</div>
+	</nav>
+
+
+<!-- <div class="container">
+  <div class="card">
+  	<div class="card-content">
+  		<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+  	</div>
+  	<div class="card-tabs">
+  		<ul class="tabs tabs-fixed-width">
+  			<li class="tab"><a href="#test4">Test 1</a></li>
+  			<li class="tab"><a class="active" href="#test5">Test 2</a></li>
+  			<li class="tab"><a href="#test6">Test 3</a></li>
+  		</ul>
+  	</div>
+  	<div class="card-content grey lighten-4">
+  		<div id="test4">Test 1</div>
+  		<div id="test5">Test 2</div>
+  		<div id="test6">Test 3</div>
+  	</div>
+  </div>
+</div> -->
+<br>
+
+<p class="hora grey-text text-darken-4"></p>
+
+<br>
+
+<div class="container white">
+	<ul class="collapsible">
+
+		<li class="activei"> <!-- Exp C&T -->
+			<div class="collapsible-header indigo white-text"><i class="material-icons">school</i>Expresso C&T</div>
+			<div class="collapsible-body indigo grey-text text-lighten-3 darken-4">
+				<table class="centered">
+					<tbody>
+						<tr class="cet" data-hora="6">
+							<td data-minuto="35">6h35</td>
+							<td data-minuto="45">45</td>
+							<td data-minuto="55">55</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="cet" data-hora="7">
+							<td data-minuto="5">7h05</td>
+							<td data-minuto="15">15</td>
+							<td data-minuto="25">25</td>
+							<td data-minuto="45">45</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="cet" data-hora="8">
+							<td data-minuto="5">8h05</td>
+							<td data-minuto="15">15</td>
+							<td data-minuto="25">25</td>
+							<td data-minuto="35">35</td>
+							<td data-minuto="45">45</td>
+							<td data-minuto="55">55<i class="material-icons icon-p white-text">restaurant</i></td>
+						</tr>
+						<tr class="cet" data-hora="9">
+							<td data-minuto="5">9h05</td>
+							<td data-minuto="25">25</td>
+							<td data-minuto="45">45</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="cet" data-hora="10">
+							<td data-minuto="5">10h05<i class="material-icons icon-p white-text">restaurant</i></td>
+							<td data-minuto="15">15<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td data-minuto="35">35</td>
+							<td data-minuto="55">55</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="cet" data-hora="11">
+							<td data-minuto="15">11h15<i class="material-icons icon-p white-text">restaurant</i></td>
+							<td data-minuto="25">25<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td data-minuto="45">45</td>
+							<td data-minuto="55">55<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="cet" data-hora="12">
+							<td data-minuto="5">12h05</td>
+							<td data-minuto="15">15</td>
+							<td data-minuto="25">25<i class="material-icons icon-p white-text">restaurant</i></td>
+							<td data-minuto="35">35</td>
+							<td data-minuto="45">45<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td data-minuto="55">55<i class="material-icons icon-p white-text">restaurant</i></td>
+						</tr>
+						<tr class="cet" data-hora="13">
+							<td data-minuto="5">13h05</td>
+							<td data-minuto="15">15<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td data-minuto="25">25</td>
+							<td data-minuto="45">45</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="cet" data-hora="14">
+							<td data-minuto="5">14h05</td>
+							<td data-minuto="25">25</td>
+							<td data-minuto="35">35</td>
+							<td data-minuto="45">45</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="cet" data-hora="15">
+							<td data-minuto="5">15h05</td>
+							<td data-minuto="25">25</td>
+							<td data-minuto="35">35<i class="material-icons icon-p white-text">restaurant</i></td>
+							<td data-minuto="45">45</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="cet" data-hora="16">
+							<td data-minuto="5">16h05</td>
+							<td data-minuto="25">25</td>
+							<td data-minuto="45">45</td>
+							<td data-minuto="55">55<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="cet" data-hora="17">
+							<td data-minuto="5">17h05</td>
+							<td data-minuto="15">15</td>
+							<td data-minuto="25">25</td>
+							<td data-minuto="35">35</td>
+							<td data-minuto="45">45</td>
+							<td data-minuto="55">55</td>
+						</tr>
+						<tr class="cet" data-hora="18">
+							<td data-minuto="5">18h05</td>
+							<td data-minuto="15">15</td>
+							<td data-minuto="25">25</td>
+							<td data-minuto="35">35</td>
+							<td data-minuto="45">45</td>
+							<td data-minuto="55">55<i class="material-icons icon-p white-text">restaurant</i></td>
+						</tr>
+						<tr class="cet" data-hora="19">
+							<td data-minuto="5">19h05</td>
+							<td data-minuto="25">25<i class="material-icons icon-p white-text">restaurant</i></td>
+							<td data-minuto="35">35v</td>
+							<td data-minuto="55">55</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="cet" data-hora="20">
+							<td data-minuto="15">20h15</td>
+							<td data-minuto="35">35</td>
+							<td data-minuto="45">45<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td data-minuto="55">55</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="cet" data-hora="21">
+							<td data-minuto="5">21h05</td>
+							<td data-minuto="15">15</td>
+							<td data-minuto="25">25</td>
+							<td data-minuto="35">35</td>
+							<td data-minuto="45">45</td>
+							<td data-minuto="55">55</td>
+						</tr>
+						<tr class="cet" data-hora="22">
+							<td data-minuto="5">22h05</td>
+							<td data-minuto="15">15</td>
+							<td data-minuto="25">25</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</li>
+
+		<li> <!-- Ext Reitoria -->
+			<div class="collapsible-header orange darken-2 white-text"><i class="material-icons">domain</i>Expresso Reitoria</div>
+			<div class="collapsible-body orange lighten-1 white-text">
+				<table class="centered">
+					<tbody>
+						<tr class="rei" data-hora="6">
+							<td data-minuto='30'>6h30</td>
+							<td data-minuto='40'>40</td>
+							<td data-minuto='50'>50</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="rei" data-hora="7">
+							<td data-minuto='0'>7h00</td>
+							<td data-minuto='10'>10</td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='30'>30</td>
+							<td data-minuto='40'>40</td>
+							<td data-minuto='50'>50</td>
+						</tr>
+						<tr class="rei" data-hora="8">
+							<td data-minuto='0'>8h00</td>
+							<td data-minuto='10'>10</td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='30'>30</td>
+							<td data-minuto='40'>40</td>
+							<td data-minuto='50'>50<i class="material-icons icon-p white-text">restaurant</i></td>
+						</tr>
+						<tr class="rei" data-hora="9">
+							<td data-minuto='0'>9h00</td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="rei" data-hora="10">
+							<td data-minuto='0'>10h00<i class="material-icons icon-p white-text">restaurant</i></td>
+							<td data-minuto='0'>00<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="rei" data-hora="11">
+							<td data-minuto='0'>11h00</td>
+							<td data-minuto='20'>20<i class="material-icons icon-p white-text">restaurant</i></td>
+							<td data-minuto='20'>20<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td data-minuto='40'>40</td>
+							<td data-minuto='55'>55<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td></td>
+						</tr>
+						<tr class="rei" data-hora="12">
+							<td data-minuto='0'>12h00</td>
+							<td data-minuto='10'>10<i class="material-icons icon-p white-text">restaurant</i></td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='30'>30<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td data-minuto='40'>40</td>
+							<td data-minuto='50'>50<i class="material-icons icon-p white-text">restaurant</i></td>
+						</tr>
+						<tr class="rei" data-hora="13">
+							<td data-minuto='0'>13h00</td>
+							<td data-minuto='10'>10<i class="material-icons icon-p white-text">directions_bus</i></td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='30'>30</td>
+							<td data-minuto='40'>40</td>
+							<td data-minuto='50'>50</td>
+						</tr>
+						<tr class="rei" data-hora="14">
+							<td data-minuto='0'>14h00</td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="rei" data-hora="15">
+							<td data-minuto='0'>15h00</td>
+							<td data-minuto='10'>10</td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='30'>30</td>
+							<td data-minuto='50'>50</td>
+							<td></td>
+						</tr>
+						<tr class="rei" data-hora="16">
+							<td data-minuto='10'>16h10</td>
+							<td data-minuto='30'>30</td>
+							<td data-minuto='40'>40</td>
+							<td data-minuto='50'>50</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="rei" data-hora="17">
+							<td data-minuto='0'>17h00</td>
+							<td data-minuto='10'>10</td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='30'>30</td>
+							<td data-minuto='40'>40</td>
+							<td data-minuto='50'>50</td>
+						</tr>
+						<tr class="rei" data-hora="18">
+							<td data-minuto='0'>18h00</td>
+							<td data-minuto='10'>10</td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='30'>30</td>
+							<td data-minuto='40'>40</td>
+							<td data-minuto='50'>50</td>
+						</tr>
+						<tr class="rei" data-hora="19">
+							<td data-minuto='0'>19h00</td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='30'>30</td>
+							<td data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="rei" data-hora="20">
+							<td data-minuto='0'>20h00</td>
+							<td data-minuto='10'>10</td>
+							<td data-minuto='20'>20</td>
+							<td data-minuto='30'>30</td>
+							<td data-minuto='40'>40</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</li>
+
+		<li> <!-- Direto -->
+			<div class="collapsible-header green darken-3 white-text"><i class="material-icons">swap_horiz</i>Direto</div>
+			<div class="collapsible-body green lighten-1 white-text">
+				<table class="centered">
+					<tbody>
+						<tr class="dir" data-hora="6">
+							<td class="tooltipped" data-position="top" data-tooltip="<i>ViaSul</i>" data-minuto='20'>6h20</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="7">
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='0'>7h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='20'>20</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='30'>30</td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="8">
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='0'>8h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='30'>30</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="9">
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='0'>9h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='30'>30</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="10">
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='0'>10h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='10'>10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='30'>30</td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="11">
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='0'>11h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='20'>20</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='30'>30</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='50'>50</td>
+						</tr>
+						<tr class="dir" data-hora="12">
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='5'>12h05</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='25'>25</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='50'>50</td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="13">
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='10'>13h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='30'>30</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="14">
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='0'>14h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='30'>30</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="15">
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='0'>15h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='30'>30</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="16">
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='10'>16h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="17">
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='20'>17h20</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="18">
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='0'>18h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='20'>20</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='40'>40</td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="19">
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='0'>19h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='20'>20</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='50'>50</td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="20">
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='10'>20h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='30'>30</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='40'>40</td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="21">
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='10'>21h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='30'>30</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='45'>45</td>
+							<td></td>
+						</tr>
+						<tr class="dir" data-hora="22">
+							<td class="tooltipped" data-position="top" data-tooltip="Guanabara" data-minuto='0'>22h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="ViaSul" data-minuto='20'>20</td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</li>
+
+		<li> <!-- Inverso -->
+			<div class="collapsible-header purple darken-3 white-text"><i class="material-icons">sync</i>Inverso</div>
+			<div class="collapsible-body purple darken-2 white-text">
+				<table class="centered">
+					<tbody>
+						<tr class="inv" data-hora="6">
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='30'>6h30</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='50'>50</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="7">
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='10'>7h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='30'>30</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='50'>50</td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="8">
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='10'>8h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="9">
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='10'>9h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="10">
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='10'>10h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="11">
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='0'>11h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='20'>20</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='40'>40</td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="12">
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='0'>12h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='15'>15</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='35'>35</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='50'>50</td>
+						</tr>
+						<tr class="inv" data-hora="13">
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='10'>13h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='30'>30</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='40'>40</td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="14">
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='20'>14h20</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="15">
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='0'>15h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='30'>30</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="16">
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='0'>16h00</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='30'>30</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='50'>50</td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="17">
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='10'>17h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='30'>30</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='50'>50</td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="18">
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='10'>18h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='30'>30</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='50'>50</td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="19">
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='30'>19h30</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="20">
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='10'>20h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='40'>40</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="inv" data-hora="21">
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='10'>21h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='20'>20</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='40'>40</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='50'>50</td>
+						</tr>
+						<tr class="inv" data-hora="22">
+							<td class="tooltipped" data-position="top" data-tooltip="Conceição" data-minuto='10'>22h10</td>
+							<td class="tooltipped" data-position="top" data-tooltip="Natal" data-minuto='20'>20</td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</li>
+
+	</ul>
+</div>
+
+<br><br>
+
+<div class="container sumario">
+	<h5>Sumário:</h5>
+	<p><i class="material-icons icon-p grey-text text-darken-4">restaurant</i> Indo para o RU.</p>
+	<p><i class="material-icons icon-p grey-text text-darken-4">directions_bus</i> Vindo do Terminal (RU).</p>
+	<p><i class="material-icons icon-p grey-text text-darken-4">chat</i> Clique no horario para saber qual é o ônibus.</p>
+	<p><i class="material-icons icon-p red-text text-darken-4">lens</i> Menos de 3min pra sair.</p>
+	<p><i class="material-icons icon-p orange-text text-darken-3">lens</i> Menos de 6min pra sair.</p>
+	<p><i class="material-icons icon-p green-text text-darken-2">lens</i> Mais de 6min pra sair.</p>
+</div>
+
+
+<script>
+	$(document).ready(function(){
+		$('.collapsible').collapsible();
+	});
+	$(document).ready(function(){
+		$('.tooltipped').tooltip();
+	});
+
+
+	function horaBus(bus){
+		if (bus == 'dir' || bus == 'inv') {
+			$(`.${bus} td`).attr('class', 'tooltipped'); console.log("Foi: " + bus);
+		} else {
+			$(`.${bus} td`).attr('class', ''); console.log("Foi: " + bus);
+		}
+
+		var dt = new Date();
+		var hora = dt.getHours();
+		var minutos = dt.getMinutes();
+		// hora = 18;
+		// minutos = 47;
+		$(".hora").text(hora+"h"+"  "+minutos+"min")
+
+		var arrayHora = $(`.${bus}[data-hora='${hora}'] td`);
+
+		arrayHora.each(function(index, element){
+			console.log($(this));
+			if(minutos < $(this).attr('data-minuto')){
+				var xMin = $(this).attr('data-minuto') - minutos;
+				if (xMin < 3) { $(this).addClass('red darken-4 white-text'); }
+				else if (xMin < 6) { $(this).addClass('orange darken-3 white-text'); }
+				else { $(this).addClass('green darken-2 white-text'); }
+				return false;
+			}
+			if (this == arrayHora[arrayHora.length - 1]){
+				var proximo = $(`.${bus}[data-hora='${hora+1}'] td:first-child`);
+				console.log(proximo);
+				var xMin = 60 - minutos + $(proximo).attr('data-minuto');
+				if (xMin < 3) { $(proximo).addClass('red darken-4 white-text'); }
+				else if (xMin < 6) { $(proximo).addClass('orange darken-3 white-text'); }
+				else { $(proximo).addClass('green darken-2 white-text'); }
+				return false;
+			}
+		});
+	}
+	horaBus('cet');
+	horaBus('rei');
+	horaBus('dir');
+	horaBus('inv');
+
+	setInterval(function(){
+	horaBus('cet');
+	horaBus('rei');
+	horaBus('dir');
+	horaBus('inv');
+	}, 30000);
+
+
+</script>
+
+</body>
+</html>

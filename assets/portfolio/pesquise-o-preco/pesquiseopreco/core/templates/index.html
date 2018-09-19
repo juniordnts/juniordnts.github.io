@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+	<!-- LISTA DE PRODUTOS -->
+
+	<section class="container">
+		<div class="product-box">
+			<ul class="nav navbar-nav">
+        {% for category in categories %}
+				  <li>
+            <a href="{% url 'search' %}">
+              {% if category.icon %}
+                  {{ category.icon.as_html }}
+              {% endif %}
+              {{ category.title }}
+            </a>
+        </li>
+        {% endfor %}
+			</ul>
+		</div>
+
+		<div class="main-slide-box">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+          {% for item in slides %}
+            {% if item.number == 1 %}
+					     <li data-target="#myCarousel" data-slide-to="{{ item.number }}" class="active"></li>
+            {% else %}
+               <li data-target="#myCarousel" data-slide-to="{{ item.number }}"></li>
+            {% endif %}
+          {% endfor %}
+				</ol>
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+          {% for item in slides %}
+            {% if item.number == 1 %}
+              <div class="item active">
+                <img src="{{ item.image.url }}" alt="{{ item.title }}">
+              </div>
+            {% else %}
+              <div class="item">
+                <img src="{{ item.image.url }}" alt="{{ item.title }}">
+              </div>
+            {% endif %}
+          {% endfor %}
+          
+				</div>
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					<span class="fa fa-angle-left indicator-fa"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">
+					<span class="fa fa-angle-right indicator-fa"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- PRODUTOS -->
+
+	<section class="container margin" style="font-family: 'Montserrat';">
+
+		<div class="product-head">
+			<div class="product-inner">
+				<div class="product-icon"><span class="fa fa-bars"></span></div>
+				<a href=""><div class="product-select"> Mais Baratos</div></a>
+				<a href=""><div class="product-select">Recentes</div></a>
+			</div>
+		</div>
+
+		<div class="flex-line" id="item-box-mobile">
+      {% for product in products %}
+			<div class="item-box">
+				<div class="item-inner">
+					<div class="item-img">
+						<img src="{{ product.image.url }}">
+					</div>
+					<div class="item-info">
+						<div class="item-txt">
+							<strong>{{ product.title }}</strong>
+						</div>
+						<div class="item-price">
+							<strong>{{ product.price }}</strong>
+							<small class="text-muted">40</small>
+							<a href="{% url 'list' %}"><button class="btn-product">Ver</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+      {% endfor %}
+		</div>
+
+	</section>
+
+	<!-- BANNER -->
+
+	<section class="container margin">
+		<div class="banner-box">
+      {% for banner in banners %}
+        <a href=""><img src="{{ banner.image.url }}"></a>
+      {% endfor %}
+      
+		</div>
+
+	</section>
+
+	<!-- DIFERENCIAL -->
+
+	<section class="container margin diferent-box">
+    
+    {% for differential in differentials %}
+      <div class="diferent-item">
+			<div class="diferent-inner">
+				<div class="diferent-box-img">
+					<img src="{{ differential.image.url }}">
+				</div>
+				<div class="diferent-txt">
+					{{ differential.description }}
+				</div>
+			</div>
+		</div>
+    {% endfor %}
+    
+	</section>
+
+	<!-- PARCEIROS -->
+
+	<section class="container margin">
+
+		<div class="product-head-partn">
+			<div class="product-inner">
+				<div class="product-icon"><span class="fa fa-bars"></span></div>
+				<div class="product-select"> Parceiros</div>
+				<div id="customNav" class="owl-nav"></div>
+			</div>
+		</div>
+
+		<div class="owl-carousel partn-box owl-theme">
+      {% for partner in partners %}
+        <div class="partn-img item"><img src="{{ partner.image.url }}"></div>
+      {% endfor %}
+		</div>
+
+	</section>
+
+{% endblock %}
