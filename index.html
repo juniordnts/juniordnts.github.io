@@ -96,55 +96,61 @@
     <div class="container mt-5 mb-5 text-center">
       <h2>Portfólio</h2>
       <div class="mt-5 text-center">
-
-        <a href="assets/portfolio/alecrim-fc/">
-          <div class="portfolio-item">
-          <img class="portfolio-img" src="assets/images/p-alecrim.png">
-          <span>Alecrim F.C.</span>
+    
+        <div class="portfolio-item">
+          <a href="assets/portfolio/alecrim-fc/">
+            <img class="portfolio-img" src="assets/images/p-alecrim.png">
+            <span>Alecrim F.C.</span>
+          </a>
+          <button class="btn btn-primary" onclick="loadPage('alecrim')">Live Page</button>
         </div>
-        </a>
-        <a href="assets/portfolio/tcm-distribuidora/">
-          <div class="portfolio-item">
-          <img class="portfolio-img" src="assets/images/p-tcm.png">
-          <span>TCM Distrib.</span>
+        <div class="portfolio-item">
+          <a href="assets/portfolio/tcm-distribuidora/">
+            <img class="portfolio-img" src="assets/images/p-tcm.png">
+            <span>TCM Distrib.</span>
+          </a>
         </div>
-        </a>
-        <a href="assets/portfolio/planeta-agua/">
-          <div class="portfolio-item">
-          <img class="portfolio-img" src="assets/images/p-planeta.png">
-          <span>Planeta Água</span>
+        <div class="portfolio-item">
+          <a href="assets/portfolio/planeta-agua/">
+            <img class="portfolio-img" src="assets/images/p-planeta.png">
+            <span>Planeta Água</span>
+          </a>
         </div>
-        </a>
-        <a href="assets/portfolio/pesquise-o-preco/">
-          <div class="portfolio-item">
-          <img class="portfolio-img" src="assets/images/p-pop.png">
-          <span>Pesquise o Preço</span>
+        <div class="portfolio-item">
+          <a href="assets/portfolio/pesquise-o-preco/">
+            <img class="portfolio-img" src="assets/images/p-pop.png">
+            <span>Pesquise o Preço</span>
+          </a>
         </div>
-        </a>
-        <a href="assets/portfolio/proaudio/">
-          <div class="portfolio-item">
-          <img class="portfolio-img" src="assets/images/p-proaudio.png">
-          <span>Proaudio</span>
+        <div class="portfolio-item">
+          <a href="assets/portfolio/proaudio/">
+            <img class="portfolio-img" src="assets/images/p-proaudio.png">
+            <span>Proaudio</span>
+          </a>
         </div>
-        </a>
-        <a href="assets/portfolio/circular/">
-          <div class="portfolio-item">
-          <img class="portfolio-img" src="assets/images/p-circular.png">
-          <span>Circular</span>
+        <div class="portfolio-item">
+          <a href="assets/portfolio/circular/">
+            <img class="portfolio-img" src="assets/images/p-circular.png">
+            <span>Circular</span>
+          </a>
         </div>
-        </a>
-        <a href="assets/portfolio/forum-sinergia/">
-          <div class="portfolio-item">
-          <img class="portfolio-img" src="assets/images/p-sinergia.png">
-          <span>Fórum Sinergia</span>
+        <div class="portfolio-item">
+          <a href="assets/portfolio/forum-sinergia/">
+            <img class="portfolio-img" src="assets/images/p-sinergia.png">
+            <span>Fórum Sinergia</span>
+          </a>
         </div>
-        </a>
       </div>
     </div>
   </section>
   
 
-
+  <div class="container text-center">
+    <div id="box-frame" class="position-relative">
+      <iframe class="w-100 h-100 position-relative" id="frame" src="" frameborder="0" onload="loadStatus()"></iframe>
+      <div class="loader"><div class="load-icon"></div></div>
+    </div>
+  </div>
 
 
   
@@ -159,5 +165,51 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/main.js"></script>
   
+<script>
+
+$("#box-frame").slideUp();
+
+function loadStatus() {
+  $(".loader").fadeOut()
+}
+
+function loadPage(page){
+
+  $("#box-frame").slideDown();
+  $(window).scrollTop($('#box-frame').offset().top);
+
+  switch (page) {
+    case 'alecrim':
+      $(".loader").fadeIn()
+      $("#frame").attr("src", "https://juniordnts.github.io/portfolio/assets/portfolio/alecrim-fc/");
+      break;
+    case 'circular':
+      $(".loader").fadeIn()
+      $("#frame").attr("src", "https://juniordnts.github.io/portfolio/assets/portfolio/circular/");
+      break;
+    case 'forum':
+      $(".loader").fadeIn()
+      $("#frame").attr("src", "https://juniordnts.github.io/portfolio/assets/portfolio/forum-sinergia/");
+      break;
+    case 'pop':
+      $(".loader").fadeIn()
+      $("#frame").attr("src", "https://juniordnts.github.io/portfolio/assets/portfolio/pesquise-o-preco/");
+      break;
+    case 'agua':
+      $(".loader").fadeIn()
+      $("#frame").attr("src", "https://juniordnts.github.io/portfolio/assets/portfolio/planeta-agua/");
+      break;
+    case 'proaudio':
+      $(".loader").fadeIn()
+      $("#frame").attr("src", "https://juniordnts.github.io/portfolio/assets/portfolio/proaudio/");
+      break;
+    case 'tcm':
+      $(".loader").fadeIn()
+      $("#frame").attr("src", "https://juniordnts.github.io/portfolio/assets/portfolio/tcm-distribuidora/");
+      break;
+  }
+}
+</script>
+
 </body>
 </html>

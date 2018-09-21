@@ -1,3 +1,4 @@
+
 :root {
   --cinzaA: #c4c4c4;
   --cinzaB: #313231;
@@ -1095,3 +1096,16 @@ a.active:after {
 
 
 
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

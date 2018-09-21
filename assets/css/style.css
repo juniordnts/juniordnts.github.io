@@ -109,9 +109,52 @@ nav{
   opacity: 0;
 }
 
+#portfolio .portfolio-item button{
+  /* width: 25px; height: 25px; */
+  font-size: 10px;
+  opacity: 0;
+  position: absolute;
+  bottom: -45px; right: 36px;
+}
+#portfolio .portfolio-item:hover button{
+  z-index: 10;
+ opacity: 1;
+ transform: scale(1.2)
+}
+
+
 @media (max-width: 770px){
   #habilidades img{
     width: 100%;
     height: auto;
   }
+}
+
+/*  */
+
+#box-frame{
+  width: 300px; height: 380px;
+  display: inline-block;
+  overflow: hidden;
+}
+.loader{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0px; left: 0px;
+}
+.load-icon {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: calc(50% - 30px); left: calc(50% - 30px);
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
