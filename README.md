@@ -1,6 +1,6 @@
 # Portfólio
 
-## --Jackson Dantas--
-#### -Desenvolvedor Web-
+## Jackson Dantas
+#### Desenvolvedor Web
 
 [Visualizar](https://juniordnts.github.io/portfolio)
