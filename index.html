@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <title>Jackson</title>
   <meta charset="UTF-8">
@@ -9,84 +10,78 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Mono|Comfortaa|Lobster" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 </head>
+
 <body>
-  
+
   <section id="home">
     <div class="text-center text-white">
       <img class="rounded-circle perfil-img" src="assets/images/me.jpg">
       <h1>Jackson Dantas</h1>
-      <h5>Desenvolvedor Web</h5>
-      <div>
-        <a href="https://www.facebook.com/juniordnts?ref=bookmarks" target="_blank"><img class="icon-img" src="assets/images/icon-face.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/juniordnts/?hl=pt-br" target="_blank"><img class="icon-img" src="assets/images/icon-insta.png" alt="Instagram"></a>
-        <a href="https://github.com/juniordnts" target="_blank"><img class="icon-img" src="assets/images/icon-git.png" alt="Github"></a>
-        <a href="https://wa.me/5584996232876?text=Oi" target="_blank"><img class="icon-img" src="assets/images/icon-whats.png" alt="Whatsapp"></a>
+      <h5>Full Stack Developer</h5>
+      <div class="links-contato">
+        <a href="https://www.facebook.com/juniordnts?ref=bookmarks" target="_blank" title="Facebook">
+          <div><i class="fab fa-facebook-f text-center align-middle"></i></div>
+        </a>
+        <a href="https://www.instagram.com/juniordnts/?hl=pt-br" target="_blank" title="Instagram">
+          <div><i class="fab fa-instagram text-center align-middle"></i></div>
+        </a>
+        <a href="https://github.com/juniordnts" target="_blank" title="Github">
+          <div><i class="fab fa-github-alt text-center align-middle"></i></div>
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="sobre">
+  <section id="fullstack">
     <div class="container pt-5 pb-5 text-center">
-      <h2>Sobre</h2>
-      <p class="pt-3 text-justify">
-        Olá, meu nome é <strong>Jackson</strong>, sou natural de Caicó, interior do Rio Grande do Norte. Atualmente moro em Natal. Estou cursando o quinto período de <strong>Ciências e Tecnologia</strong> pela UFRN. Já trabalhei pelo período de um ano desenvolvendo sites e sistemas para a <strong>Empresa Júnior de Ciências e Tecnologia - EJECT</strong>. 
-        <br>
-        Na EJECT, trabalhei desenvolvendo o front-end de diversos site, tenho bastante conhecimento das principais ferramentas de desenvolvimento front na atualidade. Para os meus projetos sempre utilizei o framework <strong>Bootstrap</strong>, por vezes escreví o código inteiro do zero. Gosto sempre de aprender novas tecnologias, por isso no momento estou estudando mais sobre <strong>React</strong>, porém ainda não desenvolvi nada usando esse framework. 
-        <br>
-        Ainda na Empresa Júnior, ajudei a construir um front que consumia uma API e todas as requisições eram feitas em <strong>AJAX</strong>. Também desenvolví o front e back-end do site do Fórum Sinergia Corporativa, para isso utilizei o <strong>Python- Django</strong>.
-        <br> 
-      </p>
+      <h2>Full Stack Developer</h2>
+
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <img src="image.png" class="w-100">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-around">
+          <p><i class="fas fa-desktop mr-2"></i> Web Sites</p>
+          <p><i class="fas fa-server mr-2"></i>Sistemas</p>
+          <p><i class="fas fa-mobile mr-2"></i>Aplicativos Mobile</p>
+          <p><i class="fas fa-plane-departure mr-2"></i>Deploy</p>
+          <p><i class="fas fa-hdd mr-2"></i>Hospedagem</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <section id="habilidades">
     <div class="container pt-5 pb-5 text-center text-white">
-      <h2>Habilidades</h2>
-      <div class="row mt-5">
-        <div class="col-md-6">
-          <div class="container">
-            <!-- <img src="assets/images/html5.png">
-            <img src="assets/images/css.png">
-            <img src="assets/images/js.png">
-            <img src="assets/images/bootstrap.png"> -->
-            <img src="assets/images/front-skills1.png">
-          </div>
+      <h2 class="mb-5">Skills</h2>
+      <div class="container d-inline-block d-md-flex justify-content-between">
+        <div class="habilidade-img m-4 d-inline-block" title="Android">
+          <img src="assets/images/skills/android.png">
         </div>
-        <div class="col-md-6 d-flex align-items-center">
-          <div class="container">
-            <p class="text-justify mb-0 mt-1">HTML</p>
-            <div class="progress rounded-0">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80"
-                aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-              </div>
-            </div>
-            <p class="text-justify mb-0 mt-4">CSS</p>
-            <div class="progress rounded-0">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80"
-                aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-              </div>
-            </div>
-            <p class="text-justify mb-0 mt-4">JavaScript</p>
-            <div class="progress rounded-0">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80"
-                aria-valuemin="0" aria-valuemax="100" style="width: 75%">
-              </div>
-            </div>
-            <p class="text-justify mb-0 mt-4">Bootstrap</p>
-            <div class="progress rounded-0">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80"
-                aria-valuemin="0" aria-valuemax="100" style="width: 65%">
-              </div>
-            </div>
-            <p class="text-justify mb-0 mt-4">Jquery - AJAX</p>
-            <div class="progress rounded-0">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80"
-                aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-              </div>
-            </div>
-          </div>
+        <div class="habilidade-img m-4 d-inline-block" title="Ubuntu">
+          <img src="assets/images/skills/ubuntu.png">
+        </div>
+        <div class="habilidade-img m-4 d-inline-block" title="Js">
+          <img src="assets/images/skills/js.png">
+        </div>
+        <div class="habilidade-img m-4 d-inline-block" title="Reactjs">
+          <img src="assets/images/skills/reactjs.png">
+        </div>
+        <div class="habilidade-img m-4 d-inline-block" title="Css">
+          <img src="assets/images/skills/css.png">
+        </div>
+        <div class="habilidade-img m-4 d-inline-block" title="Html">
+          <img src="assets/images/skills/html.png">
+        </div>
+        <div class="habilidade-img m-4 d-inline-block" title="Jquery">
+          <img src="assets/images/skills/jquery.png">
+        </div>
+        <div class="habilidade-img m-4 d-inline-block" title="Bootstrap">
+          <img src="assets/images/skills/bootstrap.png">
         </div>
       </div>
     </div>
@@ -94,128 +89,125 @@
 
   <section id="portfolio">
     <div class="container mt-5 mb-5 text-center">
-      <h2>Portfólio</h2>
+      <h2 class="mb-5">Portfólio</h2>
       <div class="mt-5 text-center">
-    
         <div class="portfolio-item">
           <a href="assets/portfolio/alecrim-fc/">
             <img class="portfolio-img" src="assets/images/p-alecrim.png">
             <span>Alecrim F.C.</span>
           </a>
-          <button class="btn btn-primary" onclick="loadPage('alecrim')">Live Page</button>
+          <button class="btn btn-dark rounded-0" onclick="loadPage('alecrim')">Live Page</button>
         </div>
         <div class="portfolio-item">
           <a href="assets/portfolio/tcm-distribuidora/">
             <img class="portfolio-img" src="assets/images/p-tcm.png">
             <span>TCM Distrib.</span>
           </a>
-          <button class="btn btn-primary" onclick="loadPage('tcm')">Live Page</button>
+          <button class="btn btn-dark rounded-0" onclick="loadPage('tcm')">Live Page</button>
         </div>
         <div class="portfolio-item">
           <a href="assets/portfolio/planeta-agua/">
             <img class="portfolio-img" src="assets/images/p-planeta.png">
             <span>Planeta Água</span>
           </a>
-          <button class="btn btn-primary" onclick="loadPage('agua')">Live Page</button>
+          <button class="btn btn-dark rounded-0" onclick="loadPage('agua')">Live Page</button>
         </div>
         <div class="portfolio-item">
           <a href="assets/portfolio/pesquise-o-preco/">
             <img class="portfolio-img" src="assets/images/p-pop.png">
             <span>Pesquise o Preço</span>
           </a>
-          <button class="btn btn-primary" onclick="loadPage('pop')">Live Page</button>
+          <button class="btn btn-dark rounded-0" onclick="loadPage('pop')">Live Page</button>
         </div>
         <div class="portfolio-item">
           <a href="assets/portfolio/proaudio/">
             <img class="portfolio-img" src="assets/images/p-proaudio.png">
             <span>Proaudio</span>
           </a>
-          <button class="btn btn-primary" onclick="loadPage('proaudio')">Live Page</button>
+          <button class="btn btn-dark rounded-0" onclick="loadPage('proaudio')">Live Page</button>
         </div>
         <div class="portfolio-item">
           <a href="assets/portfolio/circular/">
             <img class="portfolio-img" src="assets/images/p-circular.png">
             <span>Circular</span>
           </a>
-          <button class="btn btn-primary" onclick="loadPage('circular')">Live Page</button>
+          <button class="btn btn-dark rounded-0" onclick="loadPage('circular')">Live Page</button>
         </div>
         <div class="portfolio-item">
           <a href="assets/portfolio/forum-sinergia/">
             <img class="portfolio-img" src="assets/images/p-sinergia.png">
             <span>Fórum Sinergia</span>
           </a>
-          <button class="btn btn-primary" onclick="loadPage('forum')">Live Page</button>
+          <button class="btn btn-dark rounded-0" onclick="loadPage('forum')">Live Page</button>
         </div>
       </div>
     </div>
   </section>
-  
 
   <div class="container text-center">
     <div id="box-frame" class="position-relative">
       <iframe class="w-100 h-100 position-relative" id="frame" src="" frameborder="0" onload="loadStatus()"></iframe>
-      <div class="loader"><div class="load-icon"></div></div>
+      <div class="loader">
+        <div class="load-icon"></div>
+      </div>
     </div>
   </div>
 
-
-  
-  
   <footer class="container text-center">
     <hr class="featurette-divider">
-    <!-- <p class="float-right"><a href="#">Back to top</a></p> -->
-    <p>2018 - Jackson Dantas </p>
+    <p>2020 - Jackson Dantas </p>
   </footer>
-  
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/main.js"></script>
-  
-<script>
 
-$("#box-frame").slideUp();
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
 
-function loadStatus() {
-  $(".loader").fadeOut()
-}
+  <script>
 
-function loadPage(page){
+    $("#box-frame").slideUp();
 
-  $("#box-frame").slideDown();
-  $(window).scrollTop($('#box-frame').offset().top);
+    function loadStatus() {
+      $(".loader").fadeOut()
+    }
 
-  switch (page) {
-    case 'alecrim':
-      $(".loader").fadeIn()
-      $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/alecrim-fc/");
-      break;
-    case 'circular':
-      $(".loader").fadeIn()
-      $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/circular/");
-      break;
-    case 'forum':
-      $(".loader").fadeIn()
-      $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/forum-sinergia/");
-      break;
-    case 'pop':
-      $(".loader").fadeIn()
-      $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/pesquise-o-preco/");
-      break;
-    case 'agua':
-      $(".loader").fadeIn()
-      $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/planeta-agua/");
-      break;
-    case 'proaudio':
-      $(".loader").fadeIn()
-      $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/proaudio/");
-      break;
-    case 'tcm':
-      $(".loader").fadeIn()
-      $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/tcm-distribuidora/");
-      break;
-  }
-}
-</script>
+    function loadPage(page) {
+
+      $("#box-frame").slideDown();
+      $(window).scrollTop($('#box-frame').offset().top);
+
+      switch (page) {
+        case 'alecrim':
+          $(".loader").fadeIn()
+          $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/alecrim-fc/");
+          break;
+        case 'circular':
+          $(".loader").fadeIn()
+          $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/circular/");
+          break;
+        case 'forum':
+          $(".loader").fadeIn()
+          $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/forum-sinergia/");
+          break;
+        case 'pop':
+          $(".loader").fadeIn()
+          $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/pesquise-o-preco/");
+          break;
+        case 'agua':
+          $(".loader").fadeIn()
+          $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/planeta-agua/");
+          break;
+        case 'proaudio':
+          $(".loader").fadeIn()
+          $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/proaudio/");
+          break;
+        case 'tcm':
+          $(".loader").fadeIn()
+          $("#frame").attr("src", "https://juniordnts.github.io/assets/portfolio/tcm-distribuidora/");
+          break;
+      }
+    }
+  </script>
 
 </body>
+
 </html>
