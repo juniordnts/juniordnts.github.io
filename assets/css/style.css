@@ -55,6 +55,15 @@ nav {
   transform: scale(1.2)
 }
 
+#my-email {
+  height: 0px;
+  padding: 0px;
+  opacity: 0;
+  position: relative;
+  top: 0px;
+  left: -1000px;
+}
+
 .links-contato {
   text-align: center;
 }

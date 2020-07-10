@@ -16,11 +16,13 @@
 
 <body>
 
+
   <section id="home">
     <div class="text-center text-white">
       <img class="rounded-circle perfil-img" src="assets/images/me.jpg">
       <h1>Jackson Dantas</h1>
       <h5>Full Stack Developer</h5>
+      <input type="text" id="my-email" value="j.dantas27@gmail.com" />
       <div class="links-contato">
         <a href="https://www.facebook.com/juniordnts?ref=bookmarks" target="_blank" title="Facebook">
           <div><i class="fab fa-facebook-f text-center align-middle"></i></div>
@@ -30,6 +32,9 @@
         </a>
         <a href="https://github.com/juniordnts" target="_blank" title="Github">
           <div><i class="fab fa-github-alt text-center align-middle"></i></div>
+        </a>
+        <a id="email-link" target="_blank" title="Email">
+          <div><i class="fas fa-envelope text-center align-middle"></i></div>
         </a>
       </div>
     </div>
@@ -169,6 +174,16 @@
     function loadStatus() {
       $(".loader").fadeOut()
     }
+
+    $("#email-link").click(function (e) {
+      e.preventDefault();
+      var myEmail = document.querySelector('#my-email');
+      myEmail.focus();
+      // myEmail.value = "j.dantas27@gmail.com";
+      myEmail.select();
+      document.execCommand('copy');
+      alert("Meu e-mail j.dantas27@gmail.com já tá copiado na sua área de transferência 😄")
+    });
 
     function loadPage(page) {
 
